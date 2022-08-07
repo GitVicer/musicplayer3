@@ -1,6 +1,6 @@
 body{
     background-color: rgb(122, 146, 173);
-    transition: background-color 2s;
+    transition: background-color 3s;
 }
 .player{
     height: 95vh;
