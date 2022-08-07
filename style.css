@@ -1,0 +1,143 @@
+body{
+    background-color: rgb(122, 146, 173);
+    transition: background-color 2s;
+}
+.player{
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.details{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: rgb(39, 125, 96);
+    padding: 2mm;
+    border-radius: 5mm;
+}
+
+.track-art{
+    margin: 25px;
+    height:250px;
+    width: 280px;
+    background-image: URL(
+        "https://source.unsplash.com/Qrspubmx6kE/640x360");
+    background-position: centre;
+    background-size: cover;
+    border-radius: 15%;
+}
+
+.now-playing{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(15, 18, 13);
+    color: rgb(39, 125, 96);
+    padding-inline: 5mm;
+    padding-block: 0.5mm;
+    border-radius: 1mm;
+}
+
+.track-name{
+    font-size: 3rem;
+}
+
+.track-artist{
+    font-size: 1.5rem;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.playpause-track,
+.prev-track,
+.next-track{
+    padding: 25px;
+    opacity:0.8;
+    transition: opacity 0.1s;
+}
+
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover{
+    opacity:1;
+} 
+
+.beats:hover{
+    cursor: pointer;
+    color: rgb(39, 125, 96);
+    
+
+}
+
+.slider_container{
+    width:75%;
+    max-width: 400px;
+    display: flex;
+    justify-content:center;
+    align-self: center;
+}
+
+.seek_slider,.volume_slider{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: rgb(2, 32, 40);
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition:opacity .2s;
+    align-self: center;
+    border-radius: 30%;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 13px;
+    background: white;
+    cursor: pointer;
+    border-radius:20%;
+}    
+
+.seek_slider:hover,
+.volume_slider:hover{
+    background-color: rgb(39, 125, 96);
+}
+
+.seek_slider{
+    width: 60%;
+}
+
+.volume_slider{
+    width: 30%;
+}
+
+.current-time,
+.total-duration{
+    padding: 10px;
+}
+
+.fa-volume-down,
+.fa-volume-up{
+    padding: 10px;
+}
+
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward{
+    cursor: pointer;
+}
