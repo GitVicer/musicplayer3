@@ -58,26 +58,34 @@ body{
     align-items: center;
 }
 
-.playpause-track,
+.beat2,
+.beat1,
+.beat3,
+.beat4,
 .prev-track,
+.playpause-track,
 .next-track{
-    padding: 25px;
-    opacity:0.8;
-    transition: opacity 0.1s;
+    padding: 1.5mm;
+    border-style: solid;
+    border-color: rgb(84, 134, 114);
+    border-width: 1mm;
+    border-radius: 2mm;
+    margin: 2mm;
 }
 
-.playpause-track:hover,
+
+.beat1:hover,
+.beat2:hover,
+.beat3:hover,
+.beat4:hover,
 .prev-track:hover,
-.next-track:hover{
-    opacity:1;
-} 
-
-.beats:hover{
+.next-track:hover,
+.playpause-track:hover{
     cursor: pointer;
-    color: rgb(39, 125, 96);
+    border-color: rgb(122, 146, 173);
     
-
 }
+
 
 .slider_container{
     width:75%;

@@ -6,7 +6,11 @@ let track_artist = document.querySelector(".track-artist");
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
 let prev_btn = document.querySelector(".prev-track");
- 
+let beat_btn1 = document.querySelector(".beat1");
+let beat_btn2 = document.querySelector(".beat2");
+let beat_btn3 = document.querySelector(".beat3");
+let beat_btn4 = document.querySelector(".beat4");
+
 let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
 let curr_time = document.querySelector(".current-time");
@@ -17,10 +21,14 @@ let isPlaying = false;
 let updateTimer;
 let isbeat1playing = false;
 let isbeat2playing = false;
+let isbeat3playing = false;
+let isbeat4playing = false;
 
 let curr_track = document.createElement('audio');
 let beat1 = document.createElement('audio');
 let beat2 = document.createElement('audio');
+let beat3 = document.createElement('audio');
+let beat4 = document.createElement('audio');
 
 let track_list = [
     {
@@ -31,22 +39,28 @@ let track_list = [
   },
   {
     name: "let me down",
-    artist: "hum aapko suna rhe aapki ki pasand ka ye gaana",
+    artist: "This night is cold in the kingdom",
     image: "Image URL",
     path: "let me down.mp3"
   },
   {
     name: "lovely",
-    artist: "billie",
+    artist: "Thought I found a way",
     image: "Image URL",
     path: "lovely.mp3",
   },
   {
     name:"one more round",
-    artist: "k",
+    artist: "k-> My old friend",
     image: "Image URL",
     path: "one more round.mp3",
   },
+  {
+    name:"Paradise",
+    image:"Image URL",
+    artist:"Marshbhai",
+    path:"Coldplay.mp3"
+  }
   
 ];
 
@@ -75,6 +89,8 @@ function loadTrack(track_index){
 
 beat1.src="Missing-you.mp3";
 beat2.src="morning.mp3";
+beat3.src="DJ Joke.mp3"
+beat4.src="Cool Beat.mp3"
 
 function playpauseTrack(){
   if (!isPlaying) playTrack();
@@ -84,15 +100,13 @@ function playpauseTrack(){
 function playTrack(){
   curr_track.play();
   isPlaying=true;
-  playpause_btn.innerHTML='<i class="fa fa-pause-circle fa-5x"></i>';
-  
-  
+  playpause_btn.innerHTML='<i class="fa fa-pause-circle fa-4x"></i>';
 }
 
 function pauseTrack(){
   curr_track.pause();
   isPlaying=false;
-  playpause_btn.innerHTML='<i class="fa fa-play-circle fa-5x"></i>';
+  playpause_btn.innerHTML='<i class="fa fa-play-circle fa-4x"></i>';
 }
 
 function nextTrack(){
@@ -132,21 +146,64 @@ function playpausebeat2(){
 function playBeat1(){
   beat1.play();
   isbeat1playing=true;
+  beat_btn1.style.color="rgb(39, 125, 96)";
+  
 }
 
 function pauseBeat1(){
   beat1.pause();
   isbeat1playing=false;
+  beat_btn1.style.color='black';
+  
 }
 
 function playBeat2(){
   beat2.play();
   isbeat2playing=true;
+  beat_btn2.style.color="rgb(39, 125, 96)";
 }
 
 function pauseBeat2(){
   beat2.pause();
   isbeat2playing=false;
+  beat_btn2.style.color='black';
+}
+
+function playpausebeat3(){
+  if (!isbeat3playing) playBeat3();
+  else pauseBeat3();
+}
+
+function playBeat3(){
+  beat3.play();
+  isbeat3playing=true;
+  beat_btn3.style.color="rgb(39, 125, 96)";
+}
+
+function pauseBeat3(){
+  beat3.pause();
+  isbeat3playing=false;
+  beat_btn3.style.color='black';
+}
+
+function playpausebeat4(){
+  if (!isbeat4playing) playBeat4();
+  else pauseBeat4();
+}
+
+function playBeat4(){
+  beat4.play();
+  isbeat4playing=true;
+  beat_btn4.style.color="rgb(39, 125, 96)";
+  }
+  
+
+
+function pauseBeat4(){
+  beat4.pause();
+  isbeat4playing=false;
+  beat_btn4.style.color='black';
+  beat_btn4.style.hover='black';
 }
 
 function seekUpdate(){
